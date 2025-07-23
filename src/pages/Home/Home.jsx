@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import NavBar from "../../components/NavBar/NavBar";
 import { assets } from "../../assets";
+import TitleCards from "../../components/TitleCards/TitleCards";
 const Home = () => {
   return (
     <div className="home">
@@ -25,7 +26,14 @@ const Home = () => {
               More Info
             </button>
           </div>
+          <TitleCards />
         </div>
+      </div>
+      <div className="more-cards">
+        <TitleCards title={"Blockbuster Movies"} />
+        <TitleCards title={"Only On  Netflix"} />
+        <TitleCards title={"Upcoming"} />
+        <TitleCards title={"Top Pics for You"} />
       </div>
     </div>
   );
