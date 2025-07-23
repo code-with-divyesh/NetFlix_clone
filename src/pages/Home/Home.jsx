@@ -3,6 +3,7 @@ import "./Home.css";
 import NavBar from "../../components/NavBar/NavBar";
 import { assets } from "../../assets";
 import TitleCards from "../../components/TitleCards/TitleCards";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="home">
@@ -35,6 +36,7 @@ const Home = () => {
         <TitleCards title={"Upcoming"} />
         <TitleCards title={"Top Pics for You"} />
       </div>
+      <Footer />
     </div>
   );
 };
