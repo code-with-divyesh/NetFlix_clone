@@ -1,7 +1,7 @@
 // src/assets/index.js
 
 import back_arrow_icon from "./back_arrow_icon.png";
-import background_banner from "./background_banner.jpg";
+
 import bell_icon from "./bell_icon.svg";
 import caret_icon from "./caret_icon.svg";
 import facebook_icon from "./facebook_icon.png";
@@ -20,7 +20,7 @@ import youtube_icon from "./youtube_icon.png";
 
 export const assets = {
   back_arrow_icon,
-  background_banner,
+
   bell_icon,
   caret_icon,
   facebook_icon,

@@ -15,9 +15,10 @@
   display: none;
 }
 .card-list img {
-  width: 240px;
+  width: 300px;
+  height: auto;
+  object-fit: fill; /* or remove this */
   border-radius: 4px;
-  cursor: pointer;
 }
 .card-list .card {
   position: relative;
@@ -27,4 +28,15 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+.spinner {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 20px;
 }

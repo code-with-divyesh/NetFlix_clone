@@ -4,6 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import { assets } from "../../assets";
 import TitleCards from "../../components/TitleCards/TitleCards";
 import Footer from "../../components/Footer/Footer";
+const API_KEY = import.meta.env.VITE_WATCHMODE_API_KEY;
 const Home = () => {
   return (
     <div className="home">
@@ -27,14 +28,27 @@ const Home = () => {
               More Info
             </button>
           </div>
-          <TitleCards />
         </div>
       </div>
       <div className="more-cards">
-        <TitleCards title={"Blockbuster Movies"} />
-        <TitleCards title={"Only On  Netflix"} />
-        <TitleCards title={"Upcoming"} />
-        <TitleCards title={"Top Pics for You"} />
+        <TitleCards
+          title="Bollywood Movies"
+          listUrl={`https://api.watchmode.com/v1/list-titles/?types=movie&countries=IN&languages=hi&limit=10&sort_by=popularity_desc`}
+        />
+        <TitleCards
+          title="Popular Movies"
+          listUrl={`https://api.watchmode.com/v1/list-titles/?types=movie&sort_by=popularity_desc&limit=10`}
+        />
+
+        <TitleCards
+          title="Indian Web Series"
+          listUrl={`https://api.watchmode.com/v1/list-titles/?types=tv_series&countries=IN&limit=10&sort_by=popularity_desc`}
+        />
+
+        <TitleCards
+          title="Only On Netflix"
+          listUrl={`https://api.watchmode.com/v1/list-titles/?types=movie&sources=netflix&limit=10`}
+        />
       </div>
       <Footer />
     </div>
@@ -42,3 +56,4 @@ const Home = () => {
 };
 
 export default Home;
+
