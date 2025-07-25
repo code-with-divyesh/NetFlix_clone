@@ -15,6 +15,7 @@
   );
   z-index: 1;
 }
+
 .nav-left {
   display: flex;
   gap: 50px;
@@ -46,12 +47,13 @@ ul {
   border-radius: 4px;
   width: 40px;
 }
+
 .navbar-profile {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  position: reletive;
+  position: relative; /* FIX: typo was "reletive" */
 }
 
 .navbar-profile .dropdown {
@@ -63,16 +65,19 @@ ul {
   padding: 18px 22px;
   text-decoration: underline;
   border-radius: 2px;
-  z-index: 1;
-  display: none;
+  z-index: 10;
 }
+
 .navbar-profile .dropdown p {
   font-size: 12px;
   cursor: pointer;
 }
-.navbar-profile:hover .dropdown {
+
+/* REMOVE THIS */
+/* .navbar-profile:hover .dropdown {
   display: block;
-}
+} */
+
 .nav-dark {
   background: #141414;
 }

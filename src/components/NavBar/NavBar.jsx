@@ -1,8 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./NavBar.css";
 import { assets } from "../../assets";
+import { logout } from "../../firebase";
+import { useNavigate } from "react-router-dom";
+
 const NavBar = () => {
+  const navigate = useNavigate();
   const navRef = useRef();
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 80) {
@@ -12,6 +18,7 @@ const NavBar = () => {
       }
     });
   }, []);
+
   return (
     <div className="navbar" ref={navRef}>
       <div className="nav-left">
@@ -25,16 +32,33 @@ const NavBar = () => {
           <li>Browse by Languages</li>
         </ul>
       </div>
+
       <div className="nav-right">
         <img src={assets.search_icon} className="icon" alt="" />
         <p>Children</p>
         <img src={assets.bell_icon} className="icon" alt="" />
-        <div className="navbar-profile">
+
+        {/* Profile and dropdown hover zone */}
+        <div
+          className="navbar-profile"
+          onMouseEnter={() => setDropdownVisible(true)}
+          onMouseLeave={() => setDropdownVisible(false)}
+        >
           <img src={assets.profile_img} className="profile" alt="" />
           <img src={assets.caret_icon} alt="" />
-          <div className="dropdown">
-            <p>Sign out of Netflix</p>
-          </div>
+
+          {dropdownVisible && (
+            <div className="dropdown">
+              <p
+                onClick={() => {
+                  logout();
+                  navigate("/login"); // Optional redirect after logout
+                }}
+              >
+                Sign out of Netflix
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
