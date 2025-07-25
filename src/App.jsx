@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const App = () => {
   }, []);
   return (
     <div>
+      <ToastContainer theme="dark" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
