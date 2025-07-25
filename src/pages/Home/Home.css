@@ -54,3 +54,41 @@
 .more-cards {
   padding-left: 6%;
 }
+
+@media (max-width: 768px) {
+  .hero-caption {
+    padding-left: 4%;
+  }
+  .caption-img {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .hero-caption p {
+    font-size: 12px;
+  }
+  .hero-btns .btn img {
+    width: 20px;
+  }
+  .more-cards {
+    padding-left: 4%;
+  }
+}
+@media (max-width: 480px) {
+  .caption-img {
+    display: none;
+  }
+  .hero-caption p {
+    font-size: 12px;
+  }
+  .hero-btns .btn img {
+    width: 15px;
+  }
+  .btn {
+    padding: 4px 10px;
+  }
+  .more-cards {
+    padding-left: 4%;
+    gap: 5px;
+    font-size: 10px;
+  }
+}

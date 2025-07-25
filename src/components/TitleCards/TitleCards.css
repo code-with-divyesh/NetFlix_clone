@@ -40,3 +40,48 @@
   text-align: center;
   padding: 20px;
 }
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .card-list img {
+    width: 200px; /* Smaller images */
+  }
+
+  .card p {
+    font-size: 14px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .title-cards h2 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .card-list {
+    gap: 8px;
+    padding: 0 10px;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .card-list img {
+    width: 140px;
+  }
+
+  .card p {
+    font-size: 12px;
+    bottom: 6px;
+    right: 6px;
+  }
+
+  .title-cards h2 {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+
+  .card-list {
+    gap: 6px;
+    padding: 0 8px;
+  }
+}
