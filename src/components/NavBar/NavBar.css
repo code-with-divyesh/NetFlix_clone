@@ -92,7 +92,7 @@ ul {
     height: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .nav-right {
     gap: 10;
   }
