@@ -24,10 +24,6 @@ A responsive Netflix-inspired UI built using React.
 - Watchmode API
 - YouTube API
 
-## 📸 Screenshots
-
-_Add your project screenshots here_
-
 ## 🔗 Live Demo
 
 [Click here](https://netflix-app-divyesh.vercel.app)
