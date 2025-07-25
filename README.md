@@ -1,12 +1,37 @@
-# React + Vite
+# Netflix Clone 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Netflix-inspired UI built using React.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dynamic movie cards
+- Player page
+- Responsive navbar and footer
+- Mobile & tablet friendly
+- Dropdown profile menu
+- Firebase Authentication (Login & Signup)
+- Error Handling via React Toastify
+- Movie & Show data via Watchmode API
+- Trailers via YouTube API
 
-## Expanding the ESLint configuration
+## 💻 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- CSS Flex/Grid
+- Firebase Authentication
+- React Toastify
+- Watchmode API
+- YouTube API
+
+## 📸 Screenshots
+
+_Add your project screenshots here_
+
+## 🔗 Live Demo
+
+[Click here](https://netflix-app-divyesh.vercel.app)
+
+## 🙋‍♂️ Author
+
+[Divyesh Gandhi](https://github.com/code-with-divyesh/)
