@@ -58,11 +58,13 @@ const NavBar = () => {
           {dropdownVisible && (
             <div className="dropdown">
               <p
-                onClick={() => {
-                  logout().then(() => {
+                onClick={async () => {
+                  try {
+                    await logout();
                     navigate("/login", { replace: true });
-                    window.location.reload();
-                  });
+                  } catch (err) {
+                    console.error("Logout failed:", err);
+                  }
                 }}
               >
                 Sign out of Netflix
