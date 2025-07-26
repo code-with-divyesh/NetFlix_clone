@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./NavBar.css";
 import { assets } from "../../assets";
 import { logout } from "../../firebase";
-import { useNavigate } from "react-router-dom";
+import { replace, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -59,8 +59,10 @@ const NavBar = () => {
             <div className="dropdown">
               <p
                 onClick={() => {
-                  logout();
-                  navigate("/login"); // Optional redirect after logout
+                  logout().then(() => {
+                    navigate("/login", { replace: true });
+                    window.location.reload();
+                  });
                 }}
               >
                 Sign out of Netflix

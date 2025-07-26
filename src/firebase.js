@@ -39,7 +39,7 @@ const signUp = async (name, email, password) => {
     });
   } catch (error) {
     console.log(error);
-    toast.failed(
+    toast.error(
       error.code
         .split("/")[1] // remove 'auth/' prefix
         .split("-") // split by hyphens
